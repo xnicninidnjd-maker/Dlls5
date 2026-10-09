@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.22.1)
+project(neon_upscaler LANGUAGES CXX)
+add_library(neon_upscaler SHARED neon.cpp)
+target_compile_features(neon_upscaler PRIVATE cxx_std_17)
+target_compile_options(neon_upscaler PRIVATE -O3 -Wall -Wextra)
+target_link_libraries(neon_upscaler android log)
